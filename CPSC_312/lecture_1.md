@@ -1,4 +1,5 @@
 ### Code and Notes from First Day of Class (Sept. 4th, 2019)
+#### (And Subsequent Reading Notes)
 
 #### Course Logistics
 - Course Site: http://www.cs.ubc.ca/~poole/cs312/2019/
@@ -217,3 +218,66 @@ qsort (x:xs) = qsort smaller ++ [x] ++ qsort larger
 - Binary prefix functions can be made infix using back-quotes, e.g. ``` ‘div‘```
 - Infix operators can be made prefix using parentheses, e.g. ```(*)```
 
+#### Readings:
+Thompson Sections 1.1, 1.2, 1.4, 1.5, 1.7, 1.8, 1.9, 1.10, 1.11, 2.1-2.7
+
+##### Notes:
+###### (Preface)
+- Functional programming provides a high level perspective that encourages safety and robustness.
+- FP languages are GP but provide toolkits for creating DSLs
+- In FP, ideas of modern programming are presented as clearly as possible
+- FP allows us to **think differently** about programming and often help us see a wider space of possibilities for our code.
+- FP functions are simple to deconstruct and evaluate mathematically, resulting in the **Random testing** and **proof** properties being much more practical than in other languages (imperative, OO)
+###### (1.1 Computers and Modeling)
+- Programming can be seen as the task of **modelling** real or imaginary situations using the hardware of a computer (different **paradigms** provide different tools for accomplishing this).
+###### (1.2 What is a function?)
+- Gives and **output** value given one (zero?) or more **input** values. 
+- In FP, we focus on **values**, often numeric quantities, and the functions which "work over them".
+###### (1.4 Types)
+- There are different kinds of values, and specific **groupings** of values based on properties (they are the same "sort" of value) are known as types.
+- A type dicates how and if a function can act on the values of that type (if it is defined and how it is defined for a given type).
+###### (1.5 Haskell)
+- Named after Haskell B. Curry, an early contributer in the subject know as the **lambda calculus**
+- Many **implementations**, including **GHCi** (Glasgow Haskell Compiler interactive) which we will be using and which is part of the **Haskell Platform**.
+- There is a package manager software callled **cabal**.
+###### (1.7 Definitions)
+- Haskell programs consist of **definitions**, which associate a **name** (identifier) with a value of some **type**, e.g.
+    ```haskell
+    name :: type
+    name = expression
+    ```
+    or more specifically
+    ```haskell
+    size :: Integer
+    size = 12 + 13
+    ```
+- ``` :: ``` can be read as "is a/is an", i.e. "size is an Integer".
+- Note that the case convention uses capitals for type names.
+- Finally, in evaluating an expression, we can replace any identifier with the associated value, for example
+    ``` haskell
+    size - 17
+    ```
+    Can be evaluated as
+    ``` haskell
+    (12 + 13) - 17
+    ```
+    or even further as just
+    ``` haskell
+    8
+    ```
+###### (1.8 Function Definitions)
+- A function to square an ```Integer```
+    ``` haskell
+    square :: Integer -> Integer
+    square n = n * n
+    ```
+    The symbol 
+    ``` haskell 
+    -> 
+    ``` 
+    Indicates that this is a function, so the expression is equivalent to:
+    - "square is a function that takes an Integer to and Integer"
+
+    The second line defines the result of the function given the inputs and means that when ```square``` is applied to some arbitary integer ``` n ```, the result is ``` n * n```. This holds whatever the value of ```n``` is.
+
+    
