@@ -280,4 +280,32 @@ Thompson Sections 1.1, 1.2, 1.4, 1.5, 1.7, 1.8, 1.9, 1.10, 1.11, 2.1-2.7
 
     The second line defines the result of the function given the inputs and means that when ```square``` is applied to some arbitary integer ``` n ```, the result is ``` n * n```. This holds whatever the value of ```n``` is.
 
-    
+###### (1.9 Types and FP)
+- Types on functions provide:
+    1) constraints on how a function can be applied
+    2) what the type of the result will be if the function is correctly applied.
+
+    They also provide the possibility of type-checking to automatically tell if a function is being used correctly. Type-check errors are caught before any expressions or programs are evaluated.
+
+###### (1.10 Calculation and Evaluation)
+- A nice characteristic of FP is that evaluation by replacing expressions with their definitions is a **complete description** of computation in Haskell. We call these step-by-step evaluations **calculations**.
+    e.g.
+    ``` haskell
+    23 - (double (3 + 1))       
+    ~> 23 - (2 * (3+1))         using (dbl)
+    ~> 23 - (2 * 4)             arithmetic
+    ~> 23 - 8                   arithmetic
+    ~> 15                       arithmetic
+    ```
+    *Sometimes it is also convenient to undeline which part of the previous expression is modified to the next one.
+
+###### (1.11 The Essence of Haskell Programming)
+- How are **variables** in Haskell different from imperative/OO languages?
+    - A **Java** variable is like a box, storing a value, whose contents can be changed by making an asignment. Furthermore, methods can change state and result in **side-effects**.
+    - **Haskell** variables don't vary, and programs in Haskell are more of a description of the **relationships between input and output data**
+- Other aspects of Haskell:
+    - Functions can be passed around just like any other data
+    - Haskell functions do not have side effects in the context of a program, but of course there are libraries available to interact with and modify files, network resources, etc. (See **mondads**).
+    - Programs are easy to **paralellize**
+    - Definitions that are equations express **properties** of programs, and lead to straighforward proofs about computation.
+    - Easier to refactor and modify as problem specs change
