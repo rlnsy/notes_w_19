@@ -1,7 +1,7 @@
 ### Reading Post-Lecture 1
-####(Preface and Prelude - Chapter 1)
+#### (Preface and Prelude - Chapter 1)
 
-#####(Preface)
+##### (Preface)
 - Pedagogical approach: a combination of language study and interpreter study. Program with some features first, then **"distill those principles into an interpreter".**
 -   Some excercises provided by the author are available at http://www.cs.brown.edu/courses/cs173/2019/
 - Course 'schedule' per the text:
