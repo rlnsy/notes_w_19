@@ -1,2 +1,2 @@
-# notes_w_19
-School Notes in Primarily Markdown
+# Notes winter 2019
+Some school notes in Markdown
